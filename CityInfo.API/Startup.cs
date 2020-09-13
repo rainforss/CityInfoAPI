@@ -40,6 +40,7 @@ namespace CityInfo.API
             services.AddDbContext<CityInfoContext>(o=> {
                 o.UseSqlServer(connectionString);
             });
+            services.AddScoped<ICityInfoRepository, CityInfoRepository>();
         }
             
 
